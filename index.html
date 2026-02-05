@@ -56,7 +56,7 @@ header{
     box-shadow:0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* Category Title with Gradient Line */
+/* Category Title */
 
 .category h2{
     font-size:15px;
@@ -85,8 +85,6 @@ header{
     gap:10px;
 }
 
-/* Instagram Style Buttons */
-
 .links a{
     text-decoration:none;
     font-size:14px;
@@ -109,10 +107,13 @@ header{
     transform:scale(0.97);
 }
 
+/* Flex Layout */
+
 .demo-link{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    cursor:pointer;
 }
 
 .demo-id{
@@ -121,22 +122,26 @@ header{
 }
 
 /* Design Block */
+
 .design-block{
     margin-bottom:8px;
 }
 
-/* Sub Category Styling */
+/* Sub Category */
+
 .sub-links{
     margin-top:8px;
     margin-left:15px;
     border-left:2px solid #eee;
     padding-left:10px;
+    display:none;
 }
 
 .sub{
     font-size:13px;
     background:#f6f6f6;
 }
+
 </style>
 </head>
 
@@ -153,53 +158,62 @@ header{
 
         <div class="links">
 
-            <!-- Main Design -->
             <div class="design-block">
 
-                <a class="demo-link">
+                <!-- Toggle Button -->
+                <a class="demo-link toggle-btn">
                     <span>Design 1</span>
                     <span class="demo-id">ID: 1001</span>
                 </a>
 
-                <!-- Sub Category -->
+                <!-- Sub Pages -->
                 <div class="sub-links">
 
                     <a href="1001/index-infotechno.html" target="_blank" class="demo-link sub">
                         <span>Page 1</span>
                         <span class="demo-id">ID: 1001-1</span>
                     </a>
+
                     <a href="1001/index-processing.html" target="_blank" class="demo-link sub">
                         <span>Page 2</span>
                         <span class="demo-id">ID: 1001-2</span>
                     </a>
+
                     <a href="1001/index-appointment.html" target="_blank" class="demo-link sub">
                         <span>Page 3</span>
                         <span class="demo-id">ID: 1001-3</span>
                     </a>
+
                     <a href="1001/index-services.html" target="_blank" class="demo-link sub">
                         <span>Page 4</span>
                         <span class="demo-id">ID: 1001-4</span>
                     </a>
+
                     <a href="1001/index-resolutions.html" target="_blank" class="demo-link sub">
                         <span>Page 5</span>
                         <span class="demo-id">ID: 1001-5</span>
                     </a>
+
                     <a href="1001/index-cybersecurity.html" target="_blank" class="demo-link sub">
                         <span>Page 6</span>
                         <span class="demo-id">ID: 1001-6</span>
                     </a>
+
                     <a href="1001/index-modern-it-company.html" target="_blank" class="demo-link sub">
                         <span>Page 7</span>
                         <span class="demo-id">ID: 1001-7</span>
                     </a>
+
                     <a href="1001/index-machine-learning.html" target="_blank" class="demo-link sub">
                         <span>Page 8</span>
-                        <span class="demo-id">ID: 1001-7</span>
+                        <span class="demo-id">ID: 1001-8</span>
                     </a>
+
                     <a href="1001/index-software-innovation.html" target="_blank" class="demo-link sub">
                         <span>Page 9</span>
-                        <span class="demo-id">ID: 1001-7</span>
+                        <span class="demo-id">ID: 1001-9</span>
                     </a>
+
                 </div>
 
             </div>
@@ -209,6 +223,23 @@ header{
 
 </div>
 
+<script>
+
+document.querySelectorAll(".toggle-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+
+        let sub = this.nextElementSibling;
+
+        if(sub.style.display === "block"){
+            sub.style.display = "none";
+        } else {
+            sub.style.display = "block";
+        }
+
+    });
+});
+
+</script>
 
 </body>
 </html>
