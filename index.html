@@ -18,49 +18,59 @@
 }
 
 body{
-    background:#f3f5f9;
-    color:#333;
+    background:#fafafa;
+    color:#262626;
 }
 
 /* Header */
 
 header{
-    text-align:center;
-    padding:16px 10px;
     background:white;
-    border-bottom:1px solid #e0e0e0;
-}
-
-header h1{
-    font-size:18px;
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #dbdbdb;
     font-weight:500;
+    font-size:17px;
 }
 
 /* Container */
 
 .container{
-    padding:12px;
     max-width:500px;
     margin:auto;
+    padding:14px;
 }
 
 /* Category Card */
 
 .category{
     background:white;
-    border-radius:12px;
-    padding:14px;
-    margin-bottom:14px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    border-radius:16px;
+    margin-bottom:16px;
+    padding:16px;
+    border:1px solid #e6e6e6;
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* Category Title */
+/* Category Title with Gradient Line */
 
 .category h2{
     font-size:15px;
+    margin-bottom:12px;
     font-weight:500;
-    margin-bottom:10px;
-    color:#222;
+    position:relative;
+    padding-bottom:6px;
+}
+
+.category h2::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:45px;
+    height:3px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af,#515bd4);
 }
 
 /* Links */
@@ -68,41 +78,31 @@ header h1{
 .links{
     display:flex;
     flex-direction:column;
-    gap:8px;
+    gap:10px;
 }
+
+/* Instagram Style Buttons */
 
 .links a{
     text-decoration:none;
     font-size:14px;
-    padding:10px;
-    border-radius:8px;
-    background:#eef2f7;
-    color:#333;
+    padding:11px;
+    border-radius:10px;
     text-align:center;
-    transition:0.2s;
+    font-weight:500;
+    border:1px solid #dbdbdb;
+    background:#fafafa;
+    transition:0.25s;
+}
+
+.links a:hover{
+    background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af,#515bd4);
+    color:white;
+    border:none;
 }
 
 .links a:active{
-    transform:scale(0.98);
-    background:#dfe6f1;
-}
-
-/* Slightly bigger on tablet/desktop */
-
-@media(min-width:768px){
-
-header h1{
-    font-size:20px;
-}
-
-.category h2{
-    font-size:16px;
-}
-
-.links a{
-    font-size:15px;
-}
-
+    transform:scale(0.97);
 }
 
 </style>
@@ -111,7 +111,7 @@ header h1{
 <body>
 
 <header>
-    <h1>Website Demo Showcase</h1>
+    Demo Showcase
 </header>
 
 <div class="container">
