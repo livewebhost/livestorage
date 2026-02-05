@@ -109,6 +109,17 @@ header{
     transform:scale(0.97);
 }
 
+.demo-link{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.demo-id{
+    color:red;
+    font-size:13px;
+}
+
 </style>
 </head>
 
@@ -123,7 +134,10 @@ header{
     <div class="category">
         <h2>IT Services</h2>
         <div class="links">
-            <a href="http://hotel1.com" target="_blank">Design 1 - <span style="color: red;">ID: 1001</span></a>
+            <a href="http://hotel1.com" target="_blank" class="demo-link">
+                <span>Design 1</span>
+                <span class="demo-id">ID: 1001</span>
+            </a>
         </div>
     </div>
 
